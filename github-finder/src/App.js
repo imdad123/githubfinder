@@ -3,9 +3,11 @@ import './App.css';
  import {  Nav} from "./components/layouts/Nav";
 
 import React,{ Component, Fragment } from 'react';
-import {UserItem} from './components/users/UserItem'; 
+
 import { Users } from "./components/users/Users";
+import { Search  } from "./components/users/Search";
 import axios from 'axios';
+
 class App extends Component{
  /*componentDidMount(){
    axios.get('https://api.github.com/users').then(res=>console.log(res.data));
@@ -25,6 +27,7 @@ class App extends Component{
     return (
    <div className="App">
      <Nav title="Github Finder"/>
+     <Search/>
      <Users loading={this.state.loading} users={this.state.user}/>
    </div>
     );
